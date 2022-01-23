@@ -7,6 +7,20 @@ This application is generated using [LoopBack 4 CLI](https://loopback.io/doc/en/
 
 ![screen-explorer](doc/image/screen-swagger.png)
 
+[[hub.docker.com/negrero/](https://hub.docker.com/repository/docker/negrero/exampleapiloopback)]
+
+```
+docker push negrero/exampleapiloopback:tagname
+ docker run \
+      -e MONGODB_HOST=server.valdepeace.com \
+      -e MONGODB_PASS=xxxxx \
+      -e AUTH_BASIC_USERNAME=admin \
+      -e AUTH_BASIC_PASSWORD=xxxxx \
+      -p 3000:3000 \
+      -d \
+      negrero/exampleapiloopback
+```
+
 ## Install dependencies
 
 By default, dependencies were installed when this application was generated.
@@ -102,7 +116,7 @@ npm test
 | MONGODB_DB          | dbfintonic               | database mongodb     |
 
 
-
+## setup datasource-model-repository-controller
 
 ```
 D:\workspace\personal\example-api-loopback> lb4 datasource
@@ -147,56 +161,7 @@ PS D:\workspace\personal\example-api-loopback> lb4 repository
 
 Repository ProductRepository se ha/han creado en src\repositories
 
-PS D:\workspace\personal\example-api-loopback> lb4 --help
-Usage:
-  lb4 app [<name>] [options]
 
-Options:
-  -h,    --help             # Imprimir las opciones y uso del generador
-         --skip-cache       # No recordar respuestas de solicitud                                                       Default: false
-         --skip-install     # No instalar automáticamente dependencias                                                  Default: false
-         --force-install    # Se ha producido un error al instalar dependencias                                         Default: false
-         --ask-answered     # Mostrar solicitudes para opciones ya configuradas                                         Default: false
-         --applicationName  # Nombre de clase de aplicación
-         --docker           # Incluir archivo Docker y .dockerignore
-         --repositories     # Incluir importaciones de repositorio y RepositoryMixin
-         --services         # Incluir importaciones de proxy de servicio y ServiceMixin
-         --apiconnect       # Incluir ApiConnectComponent
-         --description      # Descripción de application
-         --outdir           # Directorio raíz de proyecto para application
-         --eslint           # Habilitar eslint
-         --prettier         # Habilitar prettier
-         --mocha            # Habilitar mocha
-         --loopbackBuild    # Utilizar @loopback/build
-         --vscode           # Utilizar valores de VSCode preconfigurados
-         --private          # Marque el proyecto como privado (excluido de npm publish)
-  -c,    --config           # Nombre de archivo JSON o valor para configurar opciones
-  -y,    --yes              # Saltar todas las solicitudes de confirmación con un valor predeterminado o proporcionado
-         --format           # Formatear código generado mediante npm run lint:fix
-  -pm,   --packageManager   # Cambiar el gestor de paquetes predeterminado
-
-
-Available commands:
-  lb4 app
-  lb4 extension
-  lb4 controller
-  lb4 datasource
-  lb4 import-lb3-models
-  lb4 model
-  lb4 repository
-  lb4 service
-  lb4 example
-  lb4 openapi
-  lb4 observer
-  lb4 interceptor
-  lb4 discover
-  lb4 relation
-  lb4 update
-  lb4 rest-crud
-  lb4 copyright
-  lb4 install-completion
-  lb4 uninstall-completion
-PS D:\workspace\personal\example-api-loopback> lb4 rest-creud
 PS D:\workspace\personal\example-api-loopback> lb4 rest-crud
 ? Seleccione el origen de datos DbfintonicDatasource
 ? Seleccione el modelo o los modelos que desea que generen un punto final REST CRUD Product
